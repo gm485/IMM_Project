@@ -75,5 +75,10 @@ public class GameManager : MonoBehaviour
         spawnManager.SpawnObstacles();
         titleScreen.gameObject.SetActive(false);
     }
+
+    public void LinkGit()
+    {
+        Application.OpenURL("https://github.com/gm485/IMM_Project");
+    }
     
 }

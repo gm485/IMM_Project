@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private SpawnManager spawnManager;
     private int score = 0;
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI WinnerText;
     //check for game active
     public bool isGameActive;
     //access for player movement which detects collisions
@@ -50,6 +51,14 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+    }
+
+    public void WinGame()
+    {
+        isGameActive = false;
+        WinnerText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        gameOverText.gameObject.SetActive(false);
     }
 
     public void RestartGame()
